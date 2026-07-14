@@ -2,9 +2,13 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{
 font-family:Arial,sans-serif;
-background:#07111f;
 color:#fff;
-background:linear-gradient(180deg,#07111f,#0d1830);
+background:#020b05;
+background:
+radial-gradient(circle at top,#00ff7f25 0%,transparent 40%),
+radial-gradient(circle at bottom,#39ff1420 0%,transparent 45%),
+linear-gradient(180deg,#020b05,#04150b,#071d10);
+overflow-x:hidden;
 }
 .page{max-width:430px;margin:auto;padding:20px}
 .hero{text-align:center;padding:40px 0}
@@ -23,3 +27,27 @@ h1{font-size:42px;margin:20px 0;color:#ffd54a}
 .cta h2{margin-bottom:25px}
 footer{text-align:center;padding:30px 0;color:#9aa9c7}
 footer a{color:#57a7ff;text-decoration:none;font-weight:bold}
+body::before{
+content:"";
+position:fixed;
+top:-200px;
+left:-200px;
+width:500px;
+height:500px;
+background:#39ff14;
+filter:blur(180px);
+opacity:.12;
+pointer-events:none;
+}
+body::after{
+content:"";
+position:fixed;
+bottom:-200px;
+right:-200px;
+width:500px;
+height:500px;
+background:#00ff88;
+filter:blur(180px);
+opacity:.10;
+pointer-events:none;
+}
