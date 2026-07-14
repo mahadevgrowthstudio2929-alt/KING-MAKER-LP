@@ -1,0 +1,35 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("KING MAKER Landing Page Loaded");
+
+    // Smooth scroll
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function () {
+            this.style.transform = "scale(0.97)";
+
+            setTimeout(() => {
+                this.style.transform = "scale(1)";
+            }, 150);
+        });
+    });
+
+    // Fade animation
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card, index) => {
+
+        card.style.opacity = "0";
+        card.style.transform = "translateY(40px)";
+
+        setTimeout(() => {
+
+            card.style.transition = "0.6s ease";
+
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0px)";
+
+        }, index * 150);
+
+    });
+
+});
